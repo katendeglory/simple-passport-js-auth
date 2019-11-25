@@ -3,8 +3,10 @@ const LocalStrategy = require('passport-local');
 const bcrypt = require('bcryptjs');
 const UserFakeModel = require("./models/UserFakeModel");
 
-//function passed to passport.use()
-//being a middleware, it has access to req.body, hence the username and the password
+//The verify callback
+//Being a middleware, it has access to req.body
+//req.body.username & req.body.password are passed to the verify callback 
+//a user should be return. if everything goes well, then req.user != null & req.isAuthenticated() == true.
 const authenticateUser = async (username, password, done) => {
 
   //Normally from mongo db
