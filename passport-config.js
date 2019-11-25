@@ -4,7 +4,6 @@ const bcrypt = require('bcryptjs');
 const UserFakeModel = require("./models/UserFakeModel");
 
 //function passed to passport.use()
-//done is the verify callback, its value is flashed
 //being a middleware, it has access to req.body, hence the username and the password
 const authenticateUser = async (username, password, done) => {
 
