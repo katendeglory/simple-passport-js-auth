@@ -1,0 +1,22 @@
+{
+  "name": "i-intro",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "Glory Katende",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "uuid": "^3.3.3"
+  }
+}

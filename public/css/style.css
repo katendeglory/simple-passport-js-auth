@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  color: #555;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://images.pexels.com/photos/2457284/pexels-photo-2457284.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1000");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.9;
+}
+
+.margin {
+  margin: 1rem;
+}
+
+form {
+  background: white;
+  padding: 3rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 25rem;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.form-group > label {
+  text-align: right;
+  text-transform: capitalize;
+}
+
+input {
+  padding: 0.5rem 0;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: 1s;
+}
+
+input:focus {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  transition: 1s;
+  background: #333;
+  color: white;
+  padding: 0.6rem 3rem;
+  border-radius: 0.5rem;
+  min-width: 15rem;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #111;
+  color: white;
+}
+
+.text-white {
+  color: #eee;
+  transition: 1s;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  transition: 1s;
+}
+
+.lead {
+  font-size: 1.5rem;
+}
+
+.alert-danger {
+  font-size: 1.4rem;
+  color: #eee;
+}
+
+@media (max-width: 700px) {
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
+
+  .btn {
+    min-width: 12rem !important;
+  }
+
+  .form-group > label {
+    text-align: left;
+    text-transform: capitalize;
+  }
+
+  .form-group {
+    grid-template-columns: 1fr;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  form {
+    padding: 1rem 1rem;
+    width: 90%;
+  }
+
+  .margin {
+    margin: 0.5rem;
+  }
+
+  h1 {
+    padding-top: 0.5rem;
+    font-size: 2rem !important;
+  }
+
+  body {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("https://images.pexels.com/photos/2457284/pexels-photo-2457284.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  }
+}
