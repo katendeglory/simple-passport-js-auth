@@ -25,12 +25,14 @@ const authenticateUser = async (username, password, done) => {
 passport.use(new LocalStrategy(authenticateUser));
 
 //serialize / deserialize 
-//A user should be return. if everything goes well, then req.user != null & req.isAuthenticated() == true.
 passport.serializeUser((user, done) => {
   done(null, user.id);//Probably The user returned by the verify callback
+  //This id will be stored as a cookie.
 });
 
 passport.deserializeUser((id, done) => {
+  //The id from the cookie will be used to determine who the user by fetching him from the database
+  //A user should be return. if everything goes well, then req.user != null & req.isAuthenticated() == true.
   const user = UserFakeModel.find(user => user.id === id);
   done(null, user);
 });
