@@ -6,7 +6,7 @@ const UserFakeModel = require("./models/UserFakeModel");
 //The verify callback
 //Being a middleware, it has access to req.body
 //req.body.username & req.body.password are passed to the verify callback 
-const authenticateUser = async (username, password, done) => {
+const verifyCallback = async (username, password, done) => {
 
   //Normally from mongo db
   const user = UserFakeModel.find(user => user.username === username);
@@ -22,7 +22,7 @@ const authenticateUser = async (username, password, done) => {
 }
 
 //strategy configured
-passport.use(new LocalStrategy(authenticateUser));
+passport.use(new LocalStrategy(verifyCallback));
 
 //serialize / deserialize 
 passport.serializeUser((user, done) => {
